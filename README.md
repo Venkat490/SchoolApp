@@ -25,7 +25,7 @@ The app is built according to **SOLID principles**:
 - **Single Responsibility Principle (SRP)**: Each class and component has a single responsibility.
         SchoolListScreen: Responsible for Displaying School Info for such as name & location
         SchoolDetailScreen : Responible to Provide School description in more detailed way
-- **Open/Closed Principle (OCP)**: ** NYCSchoolModel** can be extended for adding more info from the Service if needed
+- **Open/Closed Principle (OCP)**: **NYCSchoolModel** can be extended for adding more info from the Service if needed
 - **Liskov Substitution Principle (LSP)**: **NetWorkClient**  is used to abstract only required method **fetchData**. This protocol can be used to create other Network Clients
 - **Interface Segregation Principle (ISP)**: **HTTPClient** is the interface which segregated with only required method.
 - **Dependency Inversion Principle (DIP)**: **MockGetSchoolsService** is created from protocol **SchoolServiceProtocol** this way writing unitTests is more straight forward 
