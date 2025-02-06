@@ -5,7 +5,7 @@ This App displays the NewYork State school names and the location. The app fetch
 
 ## Features
 
-- **Fetch School data **: Fetches and displays the school info for the New York State
+- **Fetch School data**: Fetches and displays the school info for the New York State
 - **MVVM Architecture**: Utilizes the Model-View-ViewModel (MVVM) pattern for a clean and testable codebase.
 - **SOLID Principles**: Built with SOLID principles to ensure scalability, maintainability, and separation of concerns.
 - **Comprehensive Testing**: Includes both unit tests and UI tests for reliable performance and quality assurance.
