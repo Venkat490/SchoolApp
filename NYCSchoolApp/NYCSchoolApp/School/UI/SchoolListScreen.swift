@@ -15,12 +15,14 @@ struct SchoolListScreen: View {
             Group {
                 if viewModel.isLoading {
                     ProgressView()
+                        .accessibilityIdentifier(viewModel.accessibilityIdentifierProgressView)
                 } else {
                     List(viewModel.schools, id: \.id) { school in
                         NavigationLink(destination: SchoolDetailScreen(school: school)) {
                             SchoolRow(school: school)
                         }
                     }
+                    .accessibilityIdentifier(viewModel.accessibilityIdentifierList)
                 }
             }
             .navigationBarTitleDisplayMode(.automatic)

@@ -16,6 +16,7 @@ struct SchoolRow: View {
             Text(school.city)
                 .font(.subheadline)
         }
+        .accessibilityIdentifier("SchoolRow_\(school.id)")
         .padding()
     }
 }

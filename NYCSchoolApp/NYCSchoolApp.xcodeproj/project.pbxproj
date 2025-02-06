@@ -21,6 +21,8 @@
 		823C31602B7A88EC0035D53B /* SchoolDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823C315F2B7A88EC0035D53B /* SchoolDetailScreen.swift */; };
 		82846F982D551B5400CE99B8 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 82846F972D551B5400CE99B8 /* Resolver */; };
 		82846F9A2D551B5400CE99B8 /* Resolver-Static in Frameworks */ = {isa = PBXBuildFile; productRef = 82846F992D551B5400CE99B8 /* Resolver-Static */; };
+		82846F9D2D553FF500CE99B8 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82846F9C2D553FF500CE99B8 /* AccessibilityIdentifiers.swift */; };
+		82846F9E2D55400300CE99B8 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82846F9C2D553FF500CE99B8 /* AccessibilityIdentifiers.swift */; };
 		82E5B0582D54B74800061ABF /* SchoolServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E5B0572D54B74800061ABF /* SchoolServiceProtocol.swift */; };
 		82E5B05B2D54BB3900061ABF /* FetchSchoolDataUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E5B05A2D54BB3900061ABF /* FetchSchoolDataUseCaseProtocol.swift */; };
 		82E5B05D2D54BB6900061ABF /* FetchSchoolDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E5B05C2D54BB6900061ABF /* FetchSchoolDataUseCase.swift */; };
@@ -84,6 +86,7 @@
 		823C315B2B7A84410035D53B /* SchoolListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListScreen.swift; sourceTree = "<group>"; };
 		823C315D2B7A85400035D53B /* SchoolRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolRow.swift; sourceTree = "<group>"; };
 		823C315F2B7A88EC0035D53B /* SchoolDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailScreen.swift; sourceTree = "<group>"; };
+		82846F9C2D553FF500CE99B8 /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifiers.swift; sourceTree = "<group>"; };
 		82E5B0572D54B74800061ABF /* SchoolServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolServiceProtocol.swift; sourceTree = "<group>"; };
 		82E5B05A2D54BB3900061ABF /* FetchSchoolDataUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSchoolDataUseCaseProtocol.swift; sourceTree = "<group>"; };
 		82E5B05C2D54BB6900061ABF /* FetchSchoolDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSchoolDataUseCase.swift; sourceTree = "<group>"; };
@@ -182,6 +185,7 @@
 		823C313D2B7A79840035D53B /* NYCSchoolAppUITests */ = {
 			isa = PBXGroup;
 			children = (
+				82846F9F2D55420A00CE99B8 /* Mock Classes */,
 				823C313E2B7A79840035D53B /* NYCSchoolAppUITests.swift */,
 				823C31402B7A79840035D53B /* NYCSchoolAppUITestsLaunchTests.swift */,
 			);
@@ -247,6 +251,21 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		82846F9B2D553FCC00CE99B8 /* AccessibilityIdentifiers */ = {
+			isa = PBXGroup;
+			children = (
+				82846F9C2D553FF500CE99B8 /* AccessibilityIdentifiers.swift */,
+			);
+			path = AccessibilityIdentifiers;
+			sourceTree = "<group>";
+		};
+		82846F9F2D55420A00CE99B8 /* Mock Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Mock Classes";
+			sourceTree = "<group>";
+		};
 		82E5B0592D54BA9B00061ABF /* Use Case */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +278,7 @@
 		82E5B0622D54C4BF00061ABF /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				82846F9B2D553FCC00CE99B8 /* AccessibilityIdentifiers */,
 				82E5B0892D54F60100061ABF /* Errors */,
 				82E5B0732D54D8F700061ABF /* ServiceURLs */,
 			);
@@ -494,6 +514,7 @@
 				823C31242B7A79830035D53B /* NYCSchoolApp.swift in Sources */,
 				823C31602B7A88EC0035D53B /* SchoolDetailScreen.swift in Sources */,
 				82E5B08F2D54F7B400061ABF /* NetworkClient.swift in Sources */,
+				82846F9D2D553FF500CE99B8 /* AccessibilityIdentifiers.swift in Sources */,
 				82E5B0582D54B74800061ABF /* SchoolServiceProtocol.swift in Sources */,
 				82E5B0752D54D90800061ABF /* ServiceURLs.swift in Sources */,
 			);
@@ -515,6 +536,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82846F9E2D55400300CE99B8 /* AccessibilityIdentifiers.swift in Sources */,
 				823C313F2B7A79840035D53B /* NYCSchoolAppUITests.swift in Sources */,
 				823C31412B7A79840035D53B /* NYCSchoolAppUITestsLaunchTests.swift in Sources */,
 			);

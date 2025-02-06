@@ -27,6 +27,11 @@ class NYCSchoolViewModel: ObservableObject {
 extension NYCSchoolViewModel {
     func fetchSchools() {
         isLoading = true
+        
+         #if DEBUG
+          mockDataForUITests()
+          #endif
+
         fetchSchoolsDataUseCase()
             .sink(receiveCompletion: { [weak self] completion in
                 switch completion {
@@ -56,5 +61,57 @@ extension NYCSchoolViewModel {
             self?.showError = true
             self?.errorMessage = error.localizedDescription
         }
+    }
+}
+
+extension NYCSchoolViewModel {
+    
+    func mockDataForUITests() {
+        if ProcessInfo.processInfo.arguments.contains("MOCK_VIEWMODEL_DATA_LOADED") {
+            self.isLoading = false
+            let school = NYCSchool(
+                            schoolName: "Test School",
+                            city: "Test City",
+                            description: "Test Description"
+                        )
+            self.schools = [school]
+            return
+        }
+        else if ProcessInfo.processInfo.arguments.contains("MOCK_VIEWMODEL_DATA_LOADING") {
+            self.isLoading = true
+            sleep(10)
+            self.schools = []
+        }
+        else if ProcessInfo.processInfo.arguments.contains("MOCK_VIEWMODEL_DATA_LOADING_FAILURE") {
+            
+            Fail<[NYCSchool], SchoolError>(error: .invalidResponse)
+                .delay(for: .seconds(1), scheduler: RunLoop.main)
+                .sink(receiveCompletion: { [weak self] completion in
+                    self?.isLoading = false
+                    switch completion {
+                        case .finished:
+                            print("Call Invoke finished in Mock Datat Failure Loading Case")
+                        case .failure(let error):
+                            self?.showError = true
+                            self?.errorMessage = "Test error message"
+                    }
+                }, receiveValue: { _ in })
+                .store(in: &cancellables)
+                return
+        }
+    }
+}
+
+extension NYCSchoolViewModel {
+    var accessibilityIdentifierProgressView: String {
+        AccessibilityIdentifiers.SchoolsListScreen.loadingIndicator
+    }
+    
+    var accessibilityIdentifierList: String {
+        AccessibilityIdentifiers.SchoolsListScreen.schoolsList
+    }
+    
+    var accessibilityIdentifierDescription: String {
+        AccessibilityIdentifiers.SchoolsDetailScreen.schoolDescription
     }
 }
