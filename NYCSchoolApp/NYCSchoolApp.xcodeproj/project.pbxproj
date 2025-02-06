@@ -185,7 +185,6 @@
 		823C313D2B7A79840035D53B /* NYCSchoolAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				82846F9F2D55420A00CE99B8 /* Mock Classes */,
 				823C313E2B7A79840035D53B /* NYCSchoolAppUITests.swift */,
 				823C31402B7A79840035D53B /* NYCSchoolAppUITestsLaunchTests.swift */,
 			);
@@ -257,13 +256,6 @@
 				82846F9C2D553FF500CE99B8 /* AccessibilityIdentifiers.swift */,
 			);
 			path = AccessibilityIdentifiers;
-			sourceTree = "<group>";
-		};
-		82846F9F2D55420A00CE99B8 /* Mock Classes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Mock Classes";
 			sourceTree = "<group>";
 		};
 		82E5B0592D54BA9B00061ABF /* Use Case */ = {
@@ -693,7 +685,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -723,7 +715,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
